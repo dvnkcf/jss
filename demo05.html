@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            #main{
+                display: flex;
+                flex-direction: row;
+
+            }
+            #main>.show>div{
+                height: 60px;
+                width: 60px;
+                background-color: lightgray;
+                margin-left: 10px;
+                border-radius: 30px;
+            }
+        </style>
+        <script>
+            function changecolor(color){
+                document.getElementById('red-button').style.backgroundColor="gray";
+                document.getElementById('yellow-button').style.backgroundColor="gray";
+                document.getElementById('green-button').style.backgroundColor="gray";
+
+                document.getElementById('red').style.backgroundColor="gray";
+                document.getElementById('yellow').style.backgroundColor="gray";
+                document.getElementById('green').style.backgroundColor="gray";
+
+                if(color=="red"){
+                    document.getElementById('red').style.backgroundColor="red";
+                    document.getElementById('red-button').style.backgroundColor="red";
+                }
+                if(color=="yellow"){
+                    document.getElementById('yellow').style.backgroundColor="yellow";
+                    document.getElementById('yellow-button').style.backgroundColor="yellow";
+                if(color=="green"){
+                    document.getElementById('green').style.backgroundColor="green";
+                    document.getElementById('green-button').style.backgroundColor="green";
+
+                }    
+
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="main">
+          <div class="show">
+            <div id="red"></div>
+            <div id="yellow"></div>
+            <div id="green"></div>
+        </div>
+                        
+                    
+        <div class="buttons">
+            <input type="button" id="red-button" value="红灯" onclick="changecolor('red')">
+            <input type="button" id="yellow-button" value="黄灯" onclick="changecolor('yellow')">
+            <input type="button" id="green-button" value="绿灯" onclick="changecolor('green')">
+        </div>
+    </body>
+</html>
